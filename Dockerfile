@@ -1,12 +1,6 @@
-FROM debian:jessie
+FROM akiraho/ubuntu:16.04
 
 MAINTAINER Pedro Trindade <trindade.pedro@ubbin.com>
-
-RUN apt-get update && apt-get install -y rubygems git curl
-RUN gem install net-ssh -v 3.1.1
-RUN gem install capifony -v 2.4.2
-
-FROM akiraho/ubuntu:16.04
 
 # capistrano
 RUN export RUBY_VERSION=ruby-2.3.3 && \
